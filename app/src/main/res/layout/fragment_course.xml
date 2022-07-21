@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/add_discussion_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        app:elevation="0sp"
+        android:elevation="0sp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/video_player_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/background_dark"
+                    app:controller_layout_id="@layout/custom_exo_player_controller"
+                    app:fastforward_increment="10000"
+                    app:hide_during_ads="true"
+                    app:hide_on_touch="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:player_layout_id="@layout/exo_player_view"
+                    app:resize_mode="fit"
+                    app:rewind_increment="10000"
+                    app:show_timeout="5000"
+                    app:use_controller="true" />
+
+                <ProgressBar
+                    android:id="@+id/video_streaming_progress_bar"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_centerInParent="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/course_shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/black">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="10sp"
+                        android:layout_height="56sp"
+                        >
+
+                        <View
+                            android:id="@+id/shimmer_subject_back_button"
+                            android:layout_width="26sp"
+                            android:layout_height="26sp"
+                            android:background="@color/colorShimmer"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true" />
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@id/shimmer_subject_back_button"
+                            android:layout_marginStart="5sp"
+                            >
+
+                            <View
+                                android:id="@+id/shimmer_course_logo"
+                                android:layout_width="40sp"
+                                android:layout_height="40sp"
+                                android:layout_marginEnd="10sp"
+                                android:background="@color/colorShimmer"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="20sp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20sp"
+                                android:background="@color/colorShimmer"
+                                android:layout_marginEnd="70sp"
+                                />
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="130sp"
+                        android:layout_height="18sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:layout_marginBottom="25sp"
+                        android:background="@color/colorShimmer" />
+
+
+                    <View
+
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginBottom="20sp"
+                        android:background="@color/colorShimmer" />
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="90sp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginBottom="70sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10sp"
+                        android:background="@color/colorShimmer" />
+
+
+                </RelativeLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/course_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:visibility="visible">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/wallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/colorShimmer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_background"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_height="56sp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/subject_back_button"
+                        android:layout_width="26sp"
+                        android:layout_height="26sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_back" />
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/subject_back_button"
+                        android:layout_marginStart="5sp"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/course_logo"
+                            android:layout_width="35sp"
+                            android:layout_height="35sp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="centerCrop"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="0.5sp" />
+
+                        <TextView
+                            android:id="@+id/toolbar_course_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginEnd="55sp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Course Title"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/view_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical">
+
+
+                    <RatingBar
+                        android:id="@+id/course_star_ratings"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@null"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressTint="@color/yellow" />
+
+                    <TextView
+                        android:id="@+id/course_ratings_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:text="View reviews"
+                        android:textColor="@color/darkGray"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/subject_share_btn"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginBottom="15sp"
+                    android:src="@drawable/ic_baseline_share" />
+
+
+
+                <TextView
+                    android:id="@+id/course_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginBottom="80sp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/nested_scroll_view"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/subject_main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_gray_background"
+            android:backgroundTint="@null"
+            app:tabIconTint="@null"
+            app:tabIndicatorColor="@color/darkGray"
+            app:tabIndicatorHeight="3sp"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="@color/black" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/subject_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/subject_main_tabs" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_discussion_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:backgroundTint="@color/black"
+        app:elevation="3sp"
+        android:contentDescription="add new discussion button"
+        android:src="@drawable/new_discussion" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

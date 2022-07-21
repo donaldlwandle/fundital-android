@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0sp"
+        app:elevation="0sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/gallery_upload_photo_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="56sp"
+                android:background="@drawable/bottom_gray_background"
+                android:elevation="3sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/upload_photo_cancel_button"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:src="@drawable/cancel" />
+
+                    <Spinner
+                        android:id="@+id/spinner_directory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="31sp"
+                        android:layout_marginEnd="41sp"
+                        android:layout_toEndOf="@id/upload_photo_cancel_button"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/upload_photo_next_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16sp"
+                        android:text="next"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/blueRipple" />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gallery_upload_photo_tool_bar">
+
+                <ImageView
+                    android:id="@+id/upload_photo_gallery_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="350sp"
+                    android:background="@color/grey"
+                    android:scaleType="centerCrop" />
+
+
+                <ProgressBar
+                    android:id="@+id/upload_photo_progress_bar"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_centerInParent="true"
+                    android:layoutDirection="rtl" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- content container-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upload_photo_gallery_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56sp"
+            android:background="@color/black"
+            android:paddingTop="2.5sp"
+            android:paddingBottom="2.5sp" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

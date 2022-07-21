@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOOL BAR -->
+
+
+    <!-- content -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chapters_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:background="@color/white"
+        android:padding="5sp" />
+
+
+</RelativeLayout>

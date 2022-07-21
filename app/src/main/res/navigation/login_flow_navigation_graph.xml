@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_navigation_graph"
+    app:startDestination="@id/sign_up_dest">
+
+    <!--action back to the root destination-->
+
+    <action android:id="@+id/pop_out_of_sign_up_graph_action"
+        app:popUpTo="@id/root_navigation"
+        app:popUpToInclusive="true"/>
+
+    <!-- Sign in destination-->
+    <fragment
+        android:id="@+id/sign_up_dest"
+        android:name="com.example.infinity.signup.LoginFragment"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action android:id="@+id/register_action"
+            app:destination="@id/register_dest"/>
+
+
+        <action android:id="@+id/reset_pwd_action"
+            app:destination="@id/reset_pwd_dest"/>
+
+    </fragment>
+
+    <!-- register destination-->
+    <fragment
+        android:id="@+id/register_dest"
+        android:name="com.example.infinity.signup.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action android:id="@+id/register_action"
+            app:popUpTo="@id/sign_up_dest"/>
+
+    </fragment>
+
+
+    <!-- Reset pwd destination-->
+    <fragment
+        android:id="@+id/reset_pwd_dest"
+        android:name="com.example.infinity.signup.ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password">
+
+        <action android:id="@+id/reset_pwd_action"
+            app:popUpTo="@id/sign_up_dest"/>
+
+
+    </fragment>
+
+
+</navigation>

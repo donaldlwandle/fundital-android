@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Fundital</string>
+    <string name="chapter_string">Chapter</string>
+
+    <string-array name="chapters">
+        <item>Chapter 1</item>
+        <item>chapter 2</item>
+        <item>chapter 3</item>
+        <item>chapter 4</item>
+        <item>chapter 5</item>
+        <item>chapter 6</item>
+        <item>chapter 7</item>
+        <item>chapter 8</item>
+        <item>chapter 9</item>
+        <item>chapter 10</item>
+        <item>chapter 12</item>
+
+    </string-array>
+
+    <!--Gender String Array-->
+    <string-array name="gender">
+
+        <item>Female</item>
+        <item>Male</item>
+        <item>LGBTQ</item>
+        <item>Prefer not to say</item>
+
+    </string-array>
+
+    <!--facebook-->
+    <string name="facebook_app_id">1470609466620640</string>
+    <string name="fb_login_protocol_scheme">fb1470609466620640</string>
+
+
+    <string name="download_channel_name">Download</string>
+
+    <!-- Discussion model fields-->
+    <string name="discussion">discussion</string>
+    <string name="user_id">user_id</string>
+    <string name="username">username</string>
+    <string name="profile_pic">profile_pic</string>
+    <string name="date_created">date_created</string>
+    <string name="instructor">instructor</string>
+    <string name="discussion_id">discussion_id</string>
+
+
+</resources>

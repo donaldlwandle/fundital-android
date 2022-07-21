@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- REVIEWS TOOLBAR -->
+    <RelativeLayout
+        android:id="@+id/replies_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/replies_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56sp"
+            android:background="@drawable/bottom_gray_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/replies_back_button"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Replies"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </RelativeLayout>
+
+    <!---->
+    <RelativeLayout
+        android:id="@+id/replies_rel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/replies_rel1"
+        android:layout_marginBottom="56sp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/replies_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_gray_background" />
+
+    </RelativeLayout>
+
+    <!---->
+    <RelativeLayout
+        android:id="@+id/replies_rel3"
+        android:layout_width="match_parent"
+        android:layout_height="56sp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_backround">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/replies_user_profile_pic"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6sp"
+            android:src="@drawable/user_black"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="0.7sp" />
+
+        <EditText
+            android:id="@+id/reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="56sp"
+            android:layout_marginLeft="56sp"
+            android:layout_marginEnd="56sp"
+            android:layout_marginRight="56sp"
+            android:background="@null"
+            android:hint="Add a review...."
+            android:padding="4sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/send_reply_button"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="6sp"
+            android:src="@drawable/ic_send" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/snippet_progress_bar" />
+
+
+</RelativeLayout>

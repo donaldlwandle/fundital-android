@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settings_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settings_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/settings_back_button"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Settings"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_rel1">
+
+        <!-- TOOL BAR -->
+
+
+        <!-- MIDDLE SECTION -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settings_rel1">
+
+            <!--account section-->
+            <RelativeLayout
+                android:id="@+id/settings_mid_sec_rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <TextView
+                    android:id="@+id/account_settings_account_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25sp"
+                    android:text="Account"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/edit_profile_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/account_settings_account_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Edit profile"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+                <TextView
+                    android:id="@+id/sign_out_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_profile_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Sign out"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+
+            </RelativeLayout>
+
+
+            <!--Security-->
+            <RelativeLayout
+                android:id="@+id/settings_mid_sec_rel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_mid_sec_rel1"
+                android:layout_marginTop="20sp">
+
+                <TextView
+                    android:id="@+id/account_settings_security_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25sp"
+                    android:text="Security"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/edit_profile_update_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/account_settings_security_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Update username &amp; password"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+
+            </RelativeLayout>
+
+
+            <!--About-->
+            <RelativeLayout
+                android:id="@+id/settings_mid_sec_rel4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_mid_sec_rel2"
+                android:layout_marginTop="20sp">
+
+                <TextView
+                    android:id="@+id/account_settings_about_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25sp"
+                    android:text="About"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/privacy_policy_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/account_settings_about_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Privacy Policy"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+                <TextView
+                    android:id="@+id/terms_of_use_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/privacy_policy_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Terms of Use"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+                <TextView
+                    android:id="@+id/copyright_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/terms_of_use_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Copyright Policy"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+
+                <TextView
+                    android:id="@+id/contact_us_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/copyright_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="25sp"
+                    android:background="@drawable/text_backround"
+                    android:padding="10sp"
+                    android:text="Contact us"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/darkGray" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

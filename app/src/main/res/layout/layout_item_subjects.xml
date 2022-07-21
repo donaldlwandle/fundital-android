@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="165sp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp"
+    android:clickable="true"
+    android:background="@color/white"
+    android:focusable="true"
+    app:cardCornerRadius="5sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/subject_item_rel1"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_gravity="center">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/course_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorShimmer"
+                android:scaleType="centerCrop"
+                />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image_opaque_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/topica_text_backround" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="10sp"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:maxLines="2"
+            android:minLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/course_institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="10sp"
+            android:drawablePadding="5sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textSize="14sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_school" />
+
+        <TextView
+            android:id="@+id/course_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="10sp"
+            android:drawablePadding="5sp"
+            android:textSize="14sp"
+            app:drawableLeftCompat="@drawable/ic_views" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/course_ratings"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@null"
+                android:isIndicator="true"
+                android:progressTint="@color/yellow"
+                android:transformPivotX="0sp"
+                android:transformPivotY="0sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

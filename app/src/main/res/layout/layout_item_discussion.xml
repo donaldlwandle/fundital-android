@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_gray_background"
+    android:padding="20sp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/discussion_photo"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/discussion_rel3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_black"
+        app:civ_border_color="@color/darkGray"
+        app:civ_border_width="0.5sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/discussion_rel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60sp">
+
+
+        <TextView
+            android:id="@+id/discussion_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/discussion_user_name"
+            android:layout_marginStart="5sp"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="5sp"
+            android:text="12h"
+            android:textColor="@color/greyFont"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/discussion_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:paddingBottom="5sp"
+            android:text="username"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/is_instructor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:paddingBottom="5sp"
+            android:layout_below="@id/discussion_user_name"
+            android:text="instructor"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/holo_green_light"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/discussion_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discussion_rel3"
+        android:layout_marginStart="60sp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/discussion_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="can some one plsease help with no 4 of yesterdays problem, in companys fixed assets. especialy the calculations part "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:id="@+id/discussion_rel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dis_vote_button"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:background="@null"
+                    android:visibility="visible"
+                    android:src="@drawable/disvote_icon" />
+
+                <ImageView
+                    android:id="@+id/vote_button"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:background="@null"
+                    android:visibility="invisible"
+                    android:src="@drawable/upvote_icon" />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/up_votes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginStart="5sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/darkGray" />
+
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp">
+
+            <TextView
+                android:id="@+id/discussion_friends_replies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Edmont , Elijah and 59 Others  replied..."
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/greyFont" />
+
+            <TextView
+                android:id="@+id/view_all_replies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discussion_friends_replies"
+                android:text="See Replies"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/greyFont" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

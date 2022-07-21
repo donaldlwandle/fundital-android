@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_navigation"
+    app:startDestination="@id/home_dest">
+
+    <action android:id="@+id/login_flow_action"
+        app:destination="@id/login_navigation_graph"/>
+
+    <action android:id="@+id/account_settings_graph_action"
+        app:destination="@id/account_settings_graph"/>
+
+
+    <!--********************************************** ROOT DESTINATIONS ***********************************************-->
+
+
+    <!-- HOME DESTINATION -->
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.example.infinity.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <!-- action to subject destination -->
+        <action
+            android:id="@+id/subjectAction"
+            app:destination="@id/subject_dest"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+
+        <!-- action to search destination -->
+        <action
+            android:id="@+id/search_action"
+            app:destination="@id/search_dest"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+
+
+    </fragment>
+
+
+
+
+    <!-- DOWNLOADED DESTINATION -->
+    <fragment
+        android:id="@+id/downloaded_dest"
+        android:name="com.example.infinity.downloads.DownloadedFragment"
+        tools:layout="@layout/fragment_downloaded">
+
+    </fragment>
+
+    <!-- PROFILE DESTINATION -->
+    <fragment
+        android:id="@+id/profile_dest"
+        android:name="com.example.infinity.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+
+        <action android:id="@+id/edit_profile_action"
+            app:destination="@id/edit_profile_dest"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+
+    <!--********************************************** EXTERNAL DESTINATIONS ***********************************************-->
+
+
+    <!-- SEARCH FRAGMENT DESTINATION -->
+    <fragment
+        android:id="@+id/search_dest"
+        android:name="com.example.infinity.home.SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+
+
+
+
+    </fragment>
+
+
+    <!-- COURSE DESTINATION -->
+    <fragment
+        android:id="@+id/subject_dest"
+        android:name="com.example.infinity.home.course.CourseFragment"
+        tools:layout="@layout/fragment_course">
+
+
+
+        <!-- action back to add discussion-->
+        <action
+            android:id="@+id/add_discussion_graph_action"
+            app:destination="@+id/add_discussion_dest"/>
+
+
+
+
+
+        <!-- action to video streaming destination -->
+        <action
+            android:id="@+id/video_streaming_action"
+            app:destination="@+id/video_streaming_dest"/>
+
+        <!-- action to pdf streaming destination -->
+        <action
+            android:id="@+id/pdf_streaming_action"
+            app:destination="@id/pdf_streaming_dest"/>
+
+        <!-- action to reviews destination -->
+        <action
+            android:id="@+id/reviews_action"
+            app:destination="@id/reviews_dest"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+
+    </fragment>
+
+
+
+
+
+    <!-- pdf STREAMING DESTINATION -->
+    <fragment
+        android:id="@+id/pdf_streaming_dest"
+        android:name="com.example.infinity.home.course.PdfDisplayFragment"
+        tools:layout="@layout/fragment_pdf_display">
+
+
+
+
+
+    </fragment>
+
+
+    <!-- SUBJECT REVIEWS  DESTINATION -->
+    <fragment
+        android:id="@+id/reviews_dest"
+        android:name="com.example.infinity.reviews.ReviewsFragments"
+        tools:layout="@layout/fragment_reviews">
+
+
+
+
+
+    </fragment>
+
+
+
+
+
+    <!-- ADD DISCUSSION DEST-->
+    <fragment
+        android:id="@+id/add_discussion_dest"
+        android:name="com.example.infinity.discussion.AddNewDiscussionFragment"
+        tools:layout="@layout/fragment_add_discussion">
+
+
+
+
+    </fragment>
+
+    <!--EDIT PROFILE DESTINATION -->
+    <fragment
+        android:id="@+id/edit_profile_dest"
+        android:name="com.example.infinity.profile.EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+
+
+
+        <action android:id="@+id/upload_image_action"
+            app:destination="@id/image_upload_dest"/>
+
+    </fragment>
+
+
+    <!-- IMAGE UPLOAD DESTINATION -->
+    <fragment
+        android:id="@+id/image_upload_dest"
+        android:name="com.example.infinity.upload.FragmentUpload"
+        tools:layout="@layout/fragment_upload">
+
+
+
+    </fragment>
+
+
+    <!--login flow graph-->
+    <include app:graph = "@navigation/login_flow_navigation_graph" />
+
+
+
+    <!-- ACCOUNT AND SETTINGS  GRAPH-->
+    <include app:graph = "@navigation/account_settings_graph" />
+
+
+</navigation>

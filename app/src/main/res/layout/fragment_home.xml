@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60sp"
+    android:background="@color/white">
+
+
+
+
+    <!-- TOOL BAR -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="0sp"
+        app:elevation="0sp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/home_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:fontFamily="serif"
+                    android:text="Fundital Home"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/skill_background"
+                    android:outlineAmbientShadowColor="@color/gray"
+                    android:outlineSpotShadowColor="@color/gray">
+
+                    <ImageView
+                        android:id="@+id/searchIcon"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="15sp"
+                        android:src="@drawable/search" />
+
+                    <TextView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="30sp"
+                        android:layout_toEndOf="@id/searchIcon"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="start"
+                        android:focusable="false"
+                        android:hint="Search"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- SUBJECTS GRID LAYOUT -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:id="@+id/home_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10sp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <!-- mathematics container-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mathematics_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:fontFamily="serif"
+                    android:text="Mathematics"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mathematics_category"
+                    android:background="@color/white"
+                    android:paddingStart="10sp" />
+
+
+            </RelativeLayout>
+
+            <!-- Accounting Container-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <TextView
+                    android:id="@+id/accounting_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:fontFamily="serif"
+                    android:text="Accounting"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/accounting_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/accounting_category"
+                    android:background="@color/white"
+                    android:paddingStart="10sp" />
+
+
+            </RelativeLayout>
+
+            <!--Physics Container-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <TextView
+                    android:id="@+id/physics_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:fontFamily="serif"
+                    android:text="Physical Sciences"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/physics_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/physics_category"
+                    android:background="@color/white"
+                    android:paddingStart="10sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--Shimmer layout -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/home_shimmer_layout"
+        android:layout_marginTop="120sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical">
+
+            <!-- mathematics container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="150sp"
+                    android:background="@color/colorShimmer"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="20sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:paddingStart="10sp"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Accounting Container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="100sp"
+                    android:background="@color/colorShimmer"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10sp"
+                    android:layout_marginTop="5sp"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Physics Container-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="100sp"
+                    android:background="@color/colorShimmer"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10sp"
+                    android:layout_marginTop="5sp"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--Physics Container-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="100sp"
+                    android:background="@color/colorShimmer"
+                    android:layout_height="20sp"
+                    android:layout_marginStart="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10sp"
+                    android:layout_marginTop="5sp"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+                    <include layout="@layout/snippet_subject_shimer" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

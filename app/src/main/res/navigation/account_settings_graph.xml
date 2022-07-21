@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_settings_graph"
+    app:startDestination="@id/settings_dest">
+
+    <!--action back to the root destination-->
+
+    <action android:id="@+id/pop_out_of_account_settings_graph_action"
+        app:destination="@id/root_navigation"
+        />
+
+
+    <!--Settings main destination-->
+    <fragment android:id="@+id/settings_dest"
+        android:name="com.example.infinity.settings.SettingsFragment"
+        tools:layout="@layout/fragment_account_settings">
+
+        <action
+            android:id="@+id/logout_action"
+            app:destination="@id/logout_dest"/>
+
+    </fragment>
+
+    <!--logout destination -->
+    <fragment
+        android:id="@+id/logout_dest"
+        android:name="com.example.infinity.settings.SignOutFragment"
+        tools:layout="@layout/fragment_sign_out">
+
+        <action
+            android:id="@+id/logout_action"
+            app:popUpTo="@id/settings_dest"/>
+
+    </fragment>
+
+</navigation>

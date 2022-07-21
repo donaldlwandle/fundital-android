@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOOL BAR -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/notifications_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/reviews_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56sp"
+            android:elevation="3sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/reviews_back_button"
+                    android:layout_width="26sp"
+                    android:layout_height="26sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Downloaded"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notifications_rel1">
+
+        <EditText
+            android:id="@+id/value_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150sp"
+            android:layout_marginStart="56sp"
+            android:layout_marginEnd="56sp"
+            android:background="@null"
+            android:hint="Enter the value"
+            android:padding="5sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+
+        <Button
+            android:id="@+id/execute_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56sp"
+            android:layout_marginEnd="56sp"
+            android:layout_below="@id/value_input"
+            android:layout_marginTop="20sp"
+            android:text="Execute"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            />
+
+        <TextView
+            android:id="@+id/display_results"
+            android:layout_below="@id/execute_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56sp"
+            android:layout_marginEnd="56sp"
+            android:layout_marginTop="50sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

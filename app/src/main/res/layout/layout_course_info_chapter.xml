@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10sp"
+    android:layout_marginTop="15sp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/chapter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5sp"
+        android:text="Internal control and internal audit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_baseline_bullet" />
+
+    <TextView
+        android:id="@+id/chapter_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="21sp"
+        android:text="Internal audit process and internal control over deptors, audit evidence, results and reports, accountable management of deptors etc."
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_dest"
+        android:icon="@drawable/home_selector"
+        android:title=""
+        android:menuCategory="secondary"/>
+
+
+
+    <item
+        android:id="@+id/downloaded_dest"
+        android:title=""
+        android:icon="@drawable/downloaded_selector"
+        android:menuCategory="secondary"/>
+
+    <item
+        android:id="@+id/profile_dest"
+        android:title=""
+        android:icon="@drawable/profile_selector"
+        android:menuCategory="secondary"/>
+
+</menu>
